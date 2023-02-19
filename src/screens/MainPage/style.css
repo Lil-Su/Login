@@ -1,0 +1,61 @@
+.add {
+    width: 60px;
+    height: 60px;
+    background: rgb(233, 216, 216);
+    border-radius: 1rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 50px;
+    margin: 3rem;
+    font-size: 1.8rem;
+    border: 1px dotted gray;
+}
+.memb{
+    border-bottom: 1px dotted gray;
+    width: 300px;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+.add_memb{
+    display: flex;
+    align-items: center;
+}
+.add_title{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.member_circle {
+    width: 50px;
+    height: 50px;
+    background: rgb(149, 137, 137);
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(64, 11, 64);
+    font-weight: 600;
+}
+
+.member_block {
+    width: 350px;
+    height: 55px;
+    border: 1px solid rgb(153, 149, 153);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto 3rem;
+    box-shadow: 0 0 7px rgb(107, 25, 107);
+}
+.delet_open{
+    color: gray;
+}
+.mem_login {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(64, 11, 64);
+}
+.context_block{
+    width: 400px;
+    height: 55px;
+}
