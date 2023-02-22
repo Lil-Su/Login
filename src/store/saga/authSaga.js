@@ -1,9 +1,8 @@
 import { takeLatest } from "redux-saga/effects";
 import { put } from "redux-saga/effects";
 import { setCurrentUser, setError } from "../actions/authActions";
-import { setMemberError, setMembers } from "../actions/memberActions";
+import { setMembers } from "../actions/memberActions";
 import { autoTypes } from "../types/types";
-
 
 function* authLogin() {
     let currentUser = localStorage.getItem('currentUser')
@@ -17,9 +16,7 @@ function* logOut() {
     localStorage.removeItem('currentUser')
     yield put(setCurrentUser(null));
 }
-// localStorage.setItem('currentUser', JSON.stringify(null))
-// localStorage.setItem('memberList',JSON.stringify([{login:'Admin',password:'123456789'}]))
-// localStorage.clear()
+
 function* login(action) {
     const user = action.payloade
     let members = localStorage.getItem("memberList");

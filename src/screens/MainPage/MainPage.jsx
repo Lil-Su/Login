@@ -1,21 +1,23 @@
 import React, { useCallback, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Members from "../MembersPage/Members";
-import { logOut } from "../../store/actions/authActions";
-import { membersSelector } from "../../store/selectors/memberSelector";
+import { membersErrorSelector, membersSelector } from "../../store/selectors/memberSelector";
 import Header from "../../components/Header/Header";
 import './style.css'
+import DeletMember from "../DeletMember/DeletMember";
+
 
 export default function MainPage() {
-
     const memberList = useSelector(membersSelector)
     const [openModal, setOpenModal] = useState(false)
-    const handleOpenModal = (() => {
+    const [isOpenDeletModal, setIsOpenDeletModal] = useState(false)
+    const error = useSelector(membersErrorSelector)
+    const handleOpenModal = useCallback(() => {
         setOpenModal(true)
-    })
- const handleClick = (()=>{
-    console.log('Click clok');
- })
+    }, [openModal])
+    const openDeleteModal = useCallback(() => {
+        setIsOpenDeletModal(!isOpenDeletModal);
+    }, [isOpenDeletModal])
     return (
         <div className="inner">
             <div className="main_page">
@@ -26,6 +28,7 @@ export default function MainPage() {
                 <div className="add_memb">
                     <div className="add" onClick={handleOpenModal}>+</div>
                     <div className="add_title">Add member</div>
+                    {error ? <div style={{ color: 'red' }}>{error}</div> : null}
                 </div>
                 {memberList.map((el, index) => {
                     return (
@@ -35,14 +38,15 @@ export default function MainPage() {
                                     <div className="member_circle">{el.login[0]}</div>
                                     <div className="mem_login">{el.login}</div>
                                     <div className="delet_open">
-                                        <div onClick={handleOpenModal}>x</div>
-                                        <div onClick={handleOpenModal}>✎</div>
+                                        <div onClick={openDeleteModal}>x</div>
+                                        <div>✎</div>
                                     </div>
                                 </div>
                             </div>
                         </div>)
                 })}
                 {openModal && <Members closeModal={setOpenModal} />}
+                {isOpenDeletModal && <DeletMember />}
             </div>
         </div>
 

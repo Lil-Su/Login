@@ -10,5 +10,6 @@ export const membersTypes = {
     SET_MEMBERS: 'memberTypes/SET_MEMBERS',
     ADD_MEMBER: 'memberTypes/ADD_MEMBER',
     SET_MEMBER_ERROR: 'memberTypes/SET_MEMBER_ERROR',
-    
+    DELET_MEMBER: 'memberTypes/DELET_MEMBER',
+    EDIT_MEMBER: 'memberTypes/EDIT_MEMBER'
 }

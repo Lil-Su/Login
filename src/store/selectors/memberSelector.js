@@ -1,6 +1,6 @@
-export const membersSelector=((store)=>{
+export const membersSelector = ((store) => {
     return store.memberReducer.memberList
 })
-export const membersErrorSelector=((store)=>{
+export const membersErrorSelector = ((store) => {
     return store.memberReducer.error
 })

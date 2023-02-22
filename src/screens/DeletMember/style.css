@@ -1,0 +1,22 @@
+.inputs{
+    width: 500px;
+    height: 300px;
+    border: 1px solid pink;
+    box-shadow: 0 0 5px palevioletred;
+}
+.inp_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 10rem;
+    right: 35rem;
+
+}
+.input_input{
+    border-bottom: 2px solid purple; 
+    padding: .5rem;
+    margin: 2rem;
+    width: 300px;
+}

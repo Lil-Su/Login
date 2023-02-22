@@ -1,0 +1,14 @@
+.mem{
+ background: white;
+ width: 600px;
+ height: 350px;
+ box-shadow: 0 0 5px rgb(181, 181, 234);
+ border: 1px dotted blue;
+}
+.mem_block{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10rem;
+    right: 30rem;
+}

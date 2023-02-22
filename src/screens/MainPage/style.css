@@ -45,10 +45,11 @@
     align-items: center;
     justify-content: space-around;
     margin: auto 3rem;
-    box-shadow: 0 0 7px rgb(107, 25, 107);
+    box-shadow: 0 0 5px rgb(107, 25, 107);
 }
 .delet_open{
     color: gray;
+    position: relative;
 }
 .mem_login {
     font-size: 1.2rem;

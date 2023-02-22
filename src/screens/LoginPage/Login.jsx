@@ -5,7 +5,7 @@ import LoginTitle from "../../components/LoginTitle/LoginTitle";
 import './style.css'
 import { logIn } from "../../store/actions/authActions";
 import { errorSelector } from "../../store/selectors/authSelectors";
-import a3 from '../../components/Images/fone1.jpg'
+import a3 from '../../components/Images/a3.jpg'
 
 
 export default function Login() {
@@ -22,7 +22,6 @@ export default function Login() {
     const handleChangePassword = useCallback((e) => {
         setPassword(e.target.value)
     }, [password])
-
 
     const handleSend = useCallback((e) => {
         e.preventDefault()

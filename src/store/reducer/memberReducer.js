@@ -12,11 +12,16 @@ export default function memberReducer(state = initialState, action) {
                 ...state,
                 memberList: action.payloade
             }
-            case membersTypes.SET_MEMBER_ERROR:
-                return {
-                    ...state,
-                    error: action.payloade
-                }  
+        case membersTypes.SET_MEMBER_ERROR:
+            return {
+                ...state,
+                error: action.payloade
+            }
+        case membersTypes.DELET_MEMBER:
+            return {
+                ...state,
+                memberList: action.payloade
+            }
         default: return state
     }
 

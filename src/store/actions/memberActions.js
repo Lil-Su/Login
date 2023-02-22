@@ -20,3 +20,16 @@ export const setMemberError = (payloade) => {
         payloade
     }
 }
+export const deletMember = (payloade) => {
+    return {
+        type: membersTypes.DELET_MEMBER,
+        payloade
+    }
+}
+
+export const editMember = (payloade) => {
+    return {
+        type: membersTypes.EDIT_MEMBER,
+        payloade
+    }
+}

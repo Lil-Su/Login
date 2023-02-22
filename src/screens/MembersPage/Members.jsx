@@ -2,9 +2,9 @@ import React, { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import LoginTitle from "../../components/LoginTitle/LoginTitle";
 import Submit from "../../components/Submit/Submit";
-import { addMember, closeModal } from "../../store/actions/memberActions";
+import { addMember} from "../../store/actions/memberActions";
 import { membersErrorSelector } from "../../store/selectors/memberSelector";
-
+import './style.css'
 export default function Members({ closeModal }) {
     const [login, setMemberLogin] = useState('')
     const [password, setMemberPassword] = useState('')
@@ -36,9 +36,9 @@ export default function Members({ closeModal }) {
         closeModal(false)
     })
     return (
-        <div>
-            <div className="input_block ">
-                <form className="input_form">
+        <div className="inner">
+            <div className="input_block mem_block">
+                <form className="input_form mem">
                     <div className="cros" onClick={close}>&times;</div>
                     <LoginTitle title='Members' />
                     <div>
